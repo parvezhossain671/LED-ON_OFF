@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 MQTT Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>ESP32 MQTT Dashboard</h1>
+      <p>HiveMQ Cloud Control</p>
+    </div>
+
+    <div id="connection" class="connection disconnected">● MQTT Connecting...</div>
+
+    <div class="card">
+      <h2>ESP32 Device</h2>
+
+      <div class="device-info">
+        Device: <strong>ESP32_01</strong><br><br>
+        Connection: <span id="deviceStatus">DISCONNECTED</span>
+      </div>
+
+      <div class="led-box">
+        <div id="ledIndicator" class="led off"></div>
+        <div>
+          <div class="label">LED STATUS</div>
+          <div id="ledStatus" class="status-text">OFF</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="onBtn" class="on-btn" disabled>ON</button>
+        <button id="offBtn" class="off-btn" disabled>OFF</button>
+      </div>
+    </div>
+
+    <div class="card mqtt-info">
+      <h3>MQTT Information</h3>
+      <p>Broker:</p>
+      <code>870b4660c9b74e878261c8343be956f9.s1.eu.hivemq.cloud</code>
+
+      <p>Command Topic:</p>
+      <code>devices/esp32_01/command</code>
+
+      <p>Status Topic:</p>
+      <code>devices/esp32_01/status</code>
+    </div>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
