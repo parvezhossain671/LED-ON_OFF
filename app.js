@@ -11,7 +11,7 @@ const MQTT_PORT = 8884;
 // For testing only. Do NOT expose a production password
 // in browser JavaScript.
 const MQTT_USERNAME = "esp32";
-const MQTT_PASSWORD = "hackergame";
+const MQTT_PASSWORD = "h";
 
 // =====================================================
 // MQTT Topics
